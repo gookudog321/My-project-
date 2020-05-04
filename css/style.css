@@ -1,0 +1,590 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: content-box;
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    font-family: 'Crimson Text', serif;
+}
+.container{
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+.hamburger  {
+    display: none;
+    cursor: pointer;
+    top:1rem;
+    right: 1rem;
+    position: fixed;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.308);
+
+    padding: 10px 0.5rem;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 10px;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+#map {
+    height: 400px;
+}
+.mr{
+    margin: 0 16px;
+}
+.mr-b{
+    margin: 0 16px 16px 16px;
+}
+.container h1{
+    font-size: 46pt;
+}
+.content{
+    padding: 50px 100px 0px 100px;
+    text-align: center;
+}
+header{
+    position: relative;
+    z-index: 1000;
+}
+.bg{
+    background-color: rgba(0, 0, 0, 0.555);
+    position: absolute;
+    width: 100%;
+    height: 100px;
+}
+.menu ul {
+    display: flex;
+    justify-content: center;
+}
+.menu ul li{
+    display: inline-block;
+    padding: 36px 0.5rem;
+    list-style: none;
+}
+.menu ul li a{
+    color: #FFF;
+    text-decoration: none;
+    font-size: 16pt;
+}
+
+.menu ul li a:hover{
+    color: #f5d76e;
+}
+ul li.logo{
+   padding: 4px 50px 0 50px;
+}
+ul li.logo a img{
+    position: initial;
+    width: 150px;
+    height: 125px;
+}
+section.main-content{
+    background-image: url("image/coffee-shop.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 700px;
+
+}
+.main-text{
+    width: 600px;
+    position: absolute;
+    top: 220px;
+    margin: 0 30px;
+    padding-right: 16px;
+}   
+.main-text h1{
+    padding-left: 1rem;
+    color: #f5d76e;
+    font-size: 48pt;
+}
+.main-text p {
+    color: #FFF;
+    font-size: 16pt;
+}
+button.button{
+    margin-top: 1rem;
+    height: 50px;
+    width: 190px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid #FFF;
+    transition: 0.2s ease-in-out;
+}
+button.button:hover{
+    background-color: rgba(0, 0, 0, 0.781);
+    border: 1px solid rgba(255, 255, 255, 0.473);
+    color: #fff;
+}
+.content-one{
+    padding: 0 100px;
+
+}
+.content-one h1{
+    font-size: 32pt;
+    margin-bottom: 1rem;
+}
+.content-one p{
+    font-size: 16pt;
+    color: #9c9c9c;
+}
+.content-one ion-icon{
+    color: #ececec;
+    margin: 50px 0;
+    font-size: 40pt;
+}
+.content-menu-text h1{
+    font-size: 32pt;
+    text-align: center;
+    padding-bottom: 50px;
+    font-weight: normal;
+}
+.content-menu-grid{
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
+    grid-gap: 1rem;
+    position: relative;
+}
+.content-menu{
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+.content-menu-img{
+    position: relative;
+}
+
+.menu-title{
+    position: absolute;
+    background-color:rgba(255, 255, 255, 0.589);
+    height: 100%;
+    width: 100%;
+    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40pt;
+    font-weight: 600;
+    color: #000;
+    transition: 0.2s ease-in-out;
+    
+}
+.menu-title:hover{
+    background-color: #f1d981de;
+    color: #FFF;
+    height: 98%;
+    cursor: pointer;
+}
+
+
+.content-menu-img img{
+    width: 100%;
+    height: 100%;
+}
+.content-menu-price{
+    padding: 40px 70px;
+}
+.price{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16pt;
+}
+h1.price span{
+   font-weight: normal;
+}
+.button-see-menu{
+    display: flex;
+    justify-content: center;
+
+}
+.button-see-menu button{
+    padding: 20px 60px;
+    font-weight: 600;
+    border: 2px solid #000;
+    background-color: transparent;
+    transition: 0.2s ease-in-out;
+}
+.button-see-menu button:hover{
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.781);
+    cursor: pointer;
+}
+
+.button-see-menu ion-icon{
+    margin-top: 50px ;
+    font-size: 40pt;
+    color: #ececec;
+}
+.testimonials-grid{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    padding-top: 1rem;
+    position: relative;
+}
+
+.testimonials-grid-imge{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 440px;
+    width: 100%;
+}
+.testimonials-grid-slide{
+    background-color: #39312f;
+    height: 440px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+.testimonials-grid-slide img{
+    margin-top: 120px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+.testimonials-grid-slide h1{
+    display: inline-block;
+    position: absolute;
+    left: 1rem;
+    font-size: 80pt;
+    color: #433c3b;
+}
+.testimonials-grid-slide div{
+    position: absolute;
+    padding: 0.5rem 2rem;
+    color: #FFF;
+}
+
+.testimonials-grid-slide h2{
+    position: absolute;
+    right:  0;
+    font-size: 170pt;
+    color: #433c3b;
+    font-family: 'Catamaran', sans-serif;
+}
+
+.testimonials-grid-slide h3{
+    color: #f5d76e;
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+.dot-container{
+    display: flex;
+    bottom: 2rem;
+    text-align: center;
+    left: 40%;
+}  
+section.content h1{
+    font-size: 32pt;
+    margin-bottom: 50px;
+    font-weight: normal;
+}
+.location-grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 400px;
+    margin-top: 50px;
+}
+.map-content{
+   background-color: #f5d76e;
+   padding: 50px 50px;
+}
+.map-content h3{
+    font-size: 20px;
+    padding: 1rem 0;
+}
+.open{
+    display: flex;
+    height: 100%;
+    z-index: 1000;
+}
+footer{
+    padding: 50px 0;
+    background-color: #39312f;
+    height: 150px;
+    text-align: center;
+}
+footer ul{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+}
+footer ul li{
+    text-align: center;
+    list-style: none;
+    padding: 0 1rem;
+    font-size: 20pt;
+}
+footer ul li a ion-icon{
+    color: #FFF;
+    transition: 0.2s ease-in-out;
+}
+footer ul li a ion-icon:hover{
+    color: #f5d76e;
+}
+footer div{
+    font-size: 16pt;
+    color: #FFF;
+}
+footer p {
+    font-size: 14.13pt;
+    color: #f5d76e;
+    margin-bottom: 1rem;
+}
+footer b{
+    color: #FFF;
+}
+
+#GoTop{
+    display: none;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 99;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.555);
+    color: white;
+    cursor: pointer;
+    padding: 1rem ;
+    border-radius: 4px;
+    transition: 0.2s ease-in-out;
+}
+button ion-icon{
+    color: #fff;
+}
+#GoTop:hover{
+    background-color: rgba(0, 0, 0, 0.849);
+}
+/*  */
+
+@media only screen and (max-width: 910px){
+
+header{
+    display: none;
+
+}
+section.main-content{
+    background-attachment: scroll;
+}
+.hamburger {
+    display: inline-block;
+    z-index: 1100;
+}
+header{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+.bg{
+    background-color:rgba(0, 0, 0, 0.973);
+    height: 100%;
+    background-image: url('image/coffee-shop.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-attachment: fixed;
+    z-index: 1000;
+}
+.menu ul{
+    display: grid;
+}
+.menu ul li{
+    padding: 1rem;
+    text-align: center;
+}
+.menu ul li{
+    padding: 1rem;
+    text-align: center;
+}
+.menu ul li a:hover{
+    color: #000;
+    background-color: #f5d76e;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+}
+.menu ul li:nth-child(1){
+    margin-top: 10rem;
+}
+.menu ul li:nth-child(3){
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.logo a{
+    text-align: center;
+}
+.location-grid{
+    padding-bottom: 16px;
+}
+}
+@media only screen and (max-width: 890px){
+    .content-menu-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .content-menu:nth-child(3){
+        display: contents;
+    }
+    .button-see-menu{
+        margin-top: 50px;
+    }
+    .testimonials-grid-slide h2{
+        z-index: 1;
+    }
+    .testimonials-grid-slide div{
+        z-index: 99;
+    }
+    .map-content{
+        padding: 20px 20px;
+    }
+    .location-grid  mr-b{
+        grid-template-columns: 1.5fr 2fr;
+    }
+    .content-one{
+        padding: 0;
+    }
+    .dot-container {
+        left: 35%;
+    }
+}
+@media only screen and (max-width: 665px){
+    .content-menu-grid{
+        grid-template-columns: 1fr ;
+    }
+    .main-text{
+        margin: 0;
+        margin-left: 10px;
+        width: 530px;
+    }
+    section.content h1{
+        font-size: 29pt;
+    }
+    .menu-title:hover{
+        height: 100%;
+    }
+    .main-text h1{
+        font-size: 35pt;
+    }
+    .main-text p{
+        font-size: 13pt;
+    }
+    .dot-container {
+        left: 30%;
+    }
+}
+@media only screen and (max-width: 620px){
+    .testimonials-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+    .main-text{
+        width: auto;
+    }
+    .content {
+        padding: 50px 16px 0px 16px;
+    }
+    .location-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .map{
+        height: 400px;
+    }
+    .open {
+        justify-content: center;
+    }
+    .map-content {
+        text-align: center;
+    }
+    footer{
+        margin-top: 313px;
+    }
+}
+@media only screen and (max-width: 520px){
+    footer{
+        margin-top: 330px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .content{
+        padding: 50px 16px 0px 16px;
+    }
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    .dot-container {
+        left: 40%;
+    }
+
+    footer{
+        margin-top: 258px;
+    }
+    .content {
+        padding: 50px 16px 0px 16px;
+    }
+    .location-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .open {
+        justify-content: center;
+    }
+    .map-content {
+        text-align: center;
+    }
+    footer{
+        margin-top: 335px;
+    }
+
+}
+@media only screen and (max-width: 360px){
+    .dot-container {
+        left: 35%;
+    }
+}
+
+    @media only screen and (max-width: 277px){
+        .dot-container {
+            left: 27%;
+        }
+}
